@@ -5,27 +5,76 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- For new features.
-
 ### Changed
 
-- For changes in existing functionality.
+- Implemented new CI/CD pipeline
 
-### Deprecated
+## [1.10.7] - 2022-11-13
 
-- For soon-to-be removed features.
+### added
 
-### Removed
+- Added deprication message
 
-- For now removed features.
+## [1.10.5] - 2021-11-04
 
-### Fixed
+### changed
 
-- For any bug fix.
+- Test build process
 
-### Security
+## [1.10.3] - 2021-04-04
 
-- In case of vulnerabilities.
+### fixed
 
+- Restricted FQDN lookup to retreive IPv4 address as IPv6 is not supported by daikin aircon
+
+## [1.10.2] - 2021-04-03
+
+### fixed
+
+- Updated function script functions with new psscriptinfo format
+
+## [1.10.1] - 2021-04-03
+
+### fixed
+
+- Updated function script files with new psscriptinfo format
+
+## [1.10.0] - 2021-04-01
+
+### fixed
+
+- Replace Resolve-DNSName with .Net method-call because Resolve-DNSName is Windows only
+
+## [1.9.0] - 2021-04-01
+
+### fixed
+
+- Powershell Core: Resolved an error that occuered when testing connectivity to device
+
+## [1.8.0] - 2021-03-26
+
+### changed
+
+- Changed module manifest to include support for linux and macos platforms
+
+## [1.7.0] - 2021-03-26
+
+### added
+
+- This release is tested with 100% codecoverage
+
+### fixed
+
+- Fixed issue that caused setting of fan speed and direction to fail
+
+## [1.2.0] - 2021-03-23
+
+### changed
+
+- Update module manifest privatedata
+
+## [1.0.0] - 2021-03-01
+
+### added
+
+- First version

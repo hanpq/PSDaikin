@@ -15,7 +15,7 @@
     Author               = 'Hannes Palmquist'
     CompanyName          = 'GetPS'
     Copyright            = '(c) Hannes Palmquist. All rights reserved.'
-    Description          = 'asd'
+    Description          = 'Powershell Module to control a Daikin AirCon unit'
     RequiredModules      = @()
     FunctionsToExport    = '*'
     CmdletsToExport      = '*'
@@ -33,5 +33,3 @@
         }
     }
 }
-
-
