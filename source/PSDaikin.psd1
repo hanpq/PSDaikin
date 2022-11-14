@@ -26,7 +26,7 @@
             Prerelease               = ''
             Tags                     = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
             LicenseUri               = 'https://github.com/hanpq/PSDaikin/blob/main/LICENSE'
-            ProjectUri               = 'https://getps.dev/modules/PSDaikin/usage_getstarted'
+            ProjectUri               = 'https://getps.dev/modules/PSDaikin/getstarted'
             IconUri                  = ''
             ReleaseNotes             = ''
             RequireLicenseAcceptance = $false

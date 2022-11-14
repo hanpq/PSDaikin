@@ -10,7 +10,9 @@ This project has adopted the following policies [![CodeOfConduct](https://img.sh
 
 ## About
 
-PSDaikin is a...
+This module provides cmdlets to manage a Daikin AirCon device. These devices is equiped with a network module that provides a REST API that can be used to query status information and set configuration. This API is not documented and this module is based on the findings by "ehjortberg" and the repo <https://github.com/ael-code/daikin-control>.
+
+This is work in progress and currently only implements two cmdlets that retreive the status and a cmdlet to set mode and temperature.
 
 ## Installation
 
@@ -23,3 +25,38 @@ Install-Module PSDaikin -Scope CurrentUser
 ```
 
 ## Usage
+
+### Retreive status of a daikin device
+
+This cmdlet will try to retreive the general current status and configuration of the aircon device.
+
+```powershell
+Get-DaikinStatus -Hostname daikin.local.network
+```
+
+Example of returned response
+
+```
+PowerOn        : True
+Mode           : HEAT
+TargetTemp     : 22.0
+TargetHumidity : 0
+FanSpeed       : AUTO
+FanDirection   : Stopped
+InsideTemp     : 22.0
+InsideHumidity : -
+OutsideTemp    : 0.0
+DeviceType     : aircon
+Region         : eu
+Version        : 1.2.51
+Revision       : D3A0C9F
+Port           : 3030
+Identity       : username
+MACAddress     : ABCDEF123456
+```
+
+### Set a mode and target temp
+
+```powershell
+Set-DaikinAirCon -HostName daikin.local.network -PowerOn:$true -Temp 19 -Mode AUTO -FanSpeed AUTO
+```
