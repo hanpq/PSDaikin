@@ -28,7 +28,6 @@
             # These three must be commented until 3.0.17-beta18 is released.
             #LicenseUri               = 'https://github.com/hanpq/PSDaikin/blob/main/LICENSE'
             #RequireLicenseAcceptance = $false
-            #IconUri                  = ''
             ProjectUri   = 'https://getps.dev/modules/PSDaikin/getstarted'
             Prerelease   = ''
             Tags         = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
