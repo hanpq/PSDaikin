@@ -23,12 +23,13 @@
     AliasesToExport      = '*'
     PrivateData          = @{
         PSData = @{
-            LicenseUri               = 'https://github.com/hanpq/PSDaikin/blob/main/LICENSE'
-            RequireLicenseAcceptance = $false
-            ProjectUri               = 'https://getps.dev/modules/PSDaikin/getstarted'
-            Prerelease               = ''
-            Tags                     = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
-            ReleaseNotes             = ''
+            LicenseUri   = 'https://github.com/hanpq/PSDaikin/blob/main/LICENSE'
+            # Bug in PowershellGet 3.0.18-beta18 causes packaging of the nuget package to fail when requireLicenseAcceptance is defined.
+            #RequireLicenseAcceptance = $false
+            ProjectUri   = 'https://getps.dev/modules/PSDaikin/getstarted'
+            Prerelease   = ''
+            Tags         = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
+            ReleaseNotes = ''
         }
     }
 }

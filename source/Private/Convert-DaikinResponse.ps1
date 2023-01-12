@@ -27,6 +27,7 @@
 
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Justification = 'False positive, $raw not used but it is...')]
     [CmdletBinding()] # Enabled advanced function support
+    [OutputType([System.Collections.Specialized.OrderedDictionary])]
     param(
         [Parameter(Mandatory)]$String,
         [switch]$Raw

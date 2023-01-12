@@ -112,9 +112,6 @@ Task publish_module_to_proget -if ($PSTOOLS_APITOKEN) {
 
     Write-Build DarkGray "`nAbout to publish '$BuiltModuleBase'."
 
-    Import-Module PowershellGet -requiredVersion 3.0.18 -Force
-    Write-Build DarkGray 'Imported PowershellGet v3'
-
     $RepoGuid = (New-Guid).Guid
     Register-PSResourceRepository -name $RepoGuid -Uri $PSTOOLS_SOURCE -Trusted
     Write-Build DarkGray 'Registered ResourceRepository'
