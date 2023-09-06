@@ -107,19 +107,20 @@ Task publish_module_to_proget -if ($PSTOOLS_APITOKEN) {
     $UpdatedManifest | Set-Content $BuiltModuleManifest
     Write-Build DarkGray 'Removed empty Prerelease property if present'
 
-    Import-Module -name 'ModuleBuilder' -ErrorAction Stop
+    Import-Module -Name 'ModuleBuilder' -ErrorAction Stop
     Write-Build DarkGray 'Imported module ModuleBuilder'
 
     Write-Build DarkGray "`nAbout to publish '$BuiltModuleBase'."
 
     $RepoGuid = (New-Guid).Guid
-    Register-PSResourceRepository -name $RepoGuid -Uri $PSTOOLS_SOURCE -Trusted
+    Register-PSResourceRepository -Name $RepoGuid -Uri $PSTOOLS_SOURCE -Trusted
+    Set-PSResourceRepository -Name $RepoGuid -ApiVersion nugetServer
     Write-Build DarkGray 'Registered ResourceRepository'
 
     try
     {
         Write-Build DarkGray 'Trying to publish module to pstools...'
-        Publish-PSResource -ApiKey $PSTOOLS_APITOKEN -Path $BuiltModuleBase -Repository $RepoGuid -ErrorAction Stop
+        Publish-PSResource -ApiKey $PSTOOLS_APITOKEN -Path $BuiltModuleBase -Repository $RepoGuid -ErrorAction Stop -SkipDependenciesCheck
         Write-Build Green 'Successfully published module to ProGet'
     }
     catch
@@ -139,6 +140,6 @@ Task publish_module_to_proget -if ($PSTOOLS_APITOKEN) {
     }
     finally
     {
-        Unregister-PSResourceRepository -name $RepoGuid -Confirm:$false
+        Unregister-PSResourceRepository -Name $RepoGuid -Confirm:$false
     }
 }
