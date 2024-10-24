@@ -76,6 +76,7 @@ Pester:
       CoveragePercentTarget: 80
       OutputPath: CodeCov.xml
       OutputEncoding: ascii
+      UseBreakpoints: false
       ExcludeTests:
     TestResult:
       OutputFormat: NUnitXML
