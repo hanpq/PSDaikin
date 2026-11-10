@@ -8,7 +8,7 @@
 
 @{
     RootModule           = 'PSDaikin.psm1'
-    ModuleVersion        = '0.0.1'
+    ModuleVersion        = '1.12.0'
     CompatiblePSEditions = @('Desktop', 'Core')
     PowerShellVersion    = '5.1'
     GUID                 = 'c3de1a8c-042f-470c-b6b1-bceedbf199ef'
