@@ -3,6 +3,13 @@
 The format is based on and uses the types of changes according to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.12.1-beta001](https://github.com/hanpq/PSDaikin/compare/v1.12.0...v1.12.1-beta001) (2026-11-10)
+
+
+### Bug Fixes
+
+* trigger beta release ([1628506](https://github.com/hanpq/PSDaikin/commit/16285063bbe53912c1a839e317193d36e1ad01d3))
+
 ## [Unreleased]
 
 ## [1.12.0] - 2023-01-12
